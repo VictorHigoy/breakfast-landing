@@ -1,1 +1,32 @@
 @import "tailwindcss";
+
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: #0b0b17;
+}
+
+@theme {
+  --color-primary-bg: oklch(0.1565 0.0254 283.08);
+  --color-yellow-bg: oklch(0.8959 0.1393 91.07);
+  --color-mint-500: oklch(0.72 0.11 178);
+}
+
+/* Marquee */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% - 100vw));
+  }
+}
+
+.marquee {
+  display: flex;
+  animation: marquee 10s linear infinite;
+  white-space: nowrap;
+}
+
+.group:hover .marquee {
+  animation-play-state: paused;
+}
