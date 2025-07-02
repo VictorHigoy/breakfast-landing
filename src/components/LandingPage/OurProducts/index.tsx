@@ -1,13 +1,18 @@
+import { Link } from "react-router-dom";
+
 export default function OurProducts() {
   return (
-    <div className="flex flex-col items-center justify-center bg-[radial-gradient(ellipse_150%_105%_at_top,_#0B0B17_55%,_#875FFE_70%,_#E6F380_80%,_#EEEFF3_90%)] px-5 pt-10 pb-10 md:pb-20">
+    <div
+      id="our-products"
+      className="flex flex-col items-center justify-center bg-[radial-gradient(ellipse_150%_105%_at_top,_#0B0B17_55%,_#875FFE_70%,_#E6F380_80%,_#EEEFF3_90%)] px-5 pt-10 pb-10 md:pb-20"
+    >
       <h1 className="text-[45.05px] font-black text-white md:text-[97.38px]">
         Our Product
       </h1>
       <div className="relative flex flex-col items-center justify-center lg:flex-row">
         <img
           src="/LandingPage/Products/crystal-ball-with-coins.gif"
-          className="relative z-10 h-full max-h-[620px] w-full max-w-[670px] object-contain"
+          className="relative z-10 hidden h-full max-h-[620px] w-full max-w-[670px] object-contain md:block"
           alt="Description"
         />
         <svg
@@ -72,6 +77,92 @@ export default function OurProducts() {
           className="z-20 h-full max-h-[627px] w-full max-w-[620px] object-contain"
           alt="Description"
         />
+      </div>
+      <div className="z-30 mt-10 flex max-w-[408px] flex-col gap-5 rounded-lg border border-white bg-[#0B0B17] p-3 md:mt-20">
+        <div>
+          <div className="flex items-center">
+            <img
+              className="-ml-2 h-[70px] w-[70px]"
+              src="/Logo/FUTR_LOGO_LOOP.gif"
+              alt="Futr Logo"
+            />
+            <h1 className="text-[38.47px] font-bold text-white">
+              Futr<span className="text-[#875FFE]">.</span>
+            </h1>
+          </div>
+          <p className="text-[11.51px] text-white">
+            Futr is a social prediction platform where anyone can turn opinions
+            into outcomes. Users predict real-world events , from sports to pop
+            culture and get rewarded for being right. It’s like Twitter meets
+            Polymarket, built for everyday people. No jargon, just simple
+            yes-or-no predictions powered by stable digital money.
+          </p>
+        </div>
+        <div className="mb-2 flex w-fit flex-col gap-3 md:flex-row">
+          <Link
+            target="_blank"
+            to={"https://futr-beta.mobii.ph/"}
+            className="group flex items-center gap-5 rounded-lg border border-[#875FFE] px-3 py-1 transition-all hover:border-white hover:bg-white"
+          >
+            <p className="text-[12.5px] font-bold text-white transition-all group-hover:text-black">
+              Visit Futr.
+            </p>
+            <svg
+              width="21"
+              height="24"
+              viewBox="0 0 21 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M6.08594 17.1149L14.7584 7.3125"
+                stroke="#875FFE"
+                stroke-width="1.7345"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M6.08594 7.3125H14.7584V17.1149"
+                stroke="#875FFE"
+                stroke-width="1.7345"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </Link>
+          <Link
+            target="_blank"
+            to={"https://futr-beta.mobii.ph/"}
+            className="group flex items-center gap-5 rounded-lg border border-white px-3 py-1 transition-all hover:bg-white"
+          >
+            <p className="text-[12.5px] font-bold text-white transition-all group-hover:text-black">
+              Launch App
+            </p>
+            <svg
+              width="21"
+              height="24"
+              viewBox="0 0 21 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="text-white group-hover:text-[#875FFE]"
+            >
+              <path
+                d="M6.08594 17.1149L14.7584 7.3125"
+                stroke="currentColor"
+                stroke-width="1.7345"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M6.08594 7.3125H14.7584V17.1149"
+                stroke="currentColor"
+                stroke-width="1.7345"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </Link>
+        </div>
       </div>
     </div>
   );

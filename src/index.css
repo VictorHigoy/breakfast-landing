@@ -1,8 +1,34 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Outfit", sans-serif;
   background-color: #0b0b17;
+}
+
+@font-face {
+  font-family: "TF Madloud DEMO";
+  src: url("/fonts/TFMadloudDEMO.otf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Fragment Mono";
+  src: url("/fonts/FragmentMono-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+.header-text {
+  font-family: "TF Madloud DEMO", sans-serif;
+}
+
+.date-font {
+  font-family: "Fragment Mono", sans-serif;
 }
 
 @theme {

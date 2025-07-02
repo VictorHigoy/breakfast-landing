@@ -6,9 +6,13 @@ export default function Navbar() {
         src="/Logo/SecondBreakfast.png"
         alt="Logo"
       />
-      <div className="hidden bg-[#1F1F1F] lg:block lg:rounded-full lg:px-10 lg:py-5">
+      <div className="z-40 hidden bg-[#1F1F1F] lg:block lg:rounded-full lg:px-10 lg:py-5">
         <ul className="flex items-center gap-5 text-white lg:gap-10 lg:font-semibold">
-          <li>Our Products</li>
+          <li>
+            <a href="#our-products" className="cursor-pointer">
+              Our Products
+            </a>
+          </li>
           <li>About us</li>
           <li>Light the Beacons</li>
         </ul>
