@@ -5,7 +5,9 @@ export default function News() {
       <div className="flex max-w-[1340px] gap-5 overflow-auto">
         <div className="mb-3 min-w-[325px] md:min-w-[433px] 2xl:mb-0">
           <video
-            controls
+            playsInline
+            muted
+            loop
             autoPlay
             className="mb-4 h-auto w-[325px] rounded-2xl md:w-[433px]"
           >
@@ -21,7 +23,9 @@ export default function News() {
         </div>
         <div className="mb-3 min-w-[325px] md:min-w-[433px] 2xl:mb-0">
           <video
-            controls
+            playsInline
+            muted
+            loop
             autoPlay
             className="mb-4 h-auto w-[325px] rounded-2xl md:w-[433px]"
           >
@@ -37,7 +41,9 @@ export default function News() {
         </div>
         <div className="mb-3 min-w-[325px] md:min-w-[433px] 2xl:mb-0">
           <video
-            controls
+            playsInline
+            muted
+            loop
             autoPlay
             className="mb-4 h-auto w-[325px] rounded-2xl md:w-[433px]"
           >

@@ -15,7 +15,7 @@ export default function PartnersMarquee() {
 
   return (
     <div className="group absolute inset-0 flex w-full flex-shrink-0 overflow-hidden">
-      <Marquee>
+      <Marquee pauseOnHover>
         {partners.map((partner, idx) => (
           <img
             key={`${idx}`}

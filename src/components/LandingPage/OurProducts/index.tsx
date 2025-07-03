@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export default function OurProducts() {
   return (
@@ -6,8 +7,11 @@ export default function OurProducts() {
       id="our-products"
       className="flex flex-col items-center justify-center bg-[radial-gradient(ellipse_150%_105%_at_top,_#0B0B17_55%,_#875FFE_70%,_#E6F380_80%,_#EEEFF3_90%)] px-5 pt-10 pb-10 md:pb-20"
     >
-      <h1 className="text-[45.05px] font-black text-white md:text-[97.38px]">
-        Our Product
+      <h1 className="relative text-[45.05px] font-black text-white md:text-[97.38px]">
+        Our Product(s)
+        <p className="absolute -top-2 text-[10px] text-[#FFD966] sm:top-0 sm:right-0 md:text-[19.23px]">
+          We're still cooking. More coming soon ;)
+        </p>
       </h1>
       <div className="relative flex flex-col items-center justify-center lg:flex-row">
         <img
@@ -78,19 +82,30 @@ export default function OurProducts() {
           alt="Description"
         />
       </div>
-      <div className="z-30 mt-10 flex max-w-[408px] flex-col gap-5 rounded-lg border border-white bg-[#0B0B17] p-3 md:mt-20">
+      <motion.div
+        animate={{
+          y: [0, -20, 0], // up, then down
+        }}
+        transition={{
+          duration: 2,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 0,
+        }}
+        className="z-30 mt-10 flex w-full max-w-[952px] flex-col items-center gap-7 rounded-3xl border border-white bg-[#0B0B17] p-5 md:mt-20"
+      >
         <div>
-          <div className="flex items-center">
+          <div className="mb-3 flex items-center justify-center">
             <img
-              className="-ml-2 h-[70px] w-[70px]"
+              className="h-[80px] w-[80px]"
               src="/Logo/FUTR_LOGO_LOOP.gif"
               alt="Futr Logo"
             />
-            <h1 className="text-[38.47px] font-bold text-white">
+            <h1 className="text-[48px] font-black text-white">
               Futr<span className="text-[#875FFE]">.</span>
             </h1>
           </div>
-          <p className="text-[11.51px] text-white">
+          <p className="max-w-[818px] text-center text-[17.65px] font-light tracking-[-0.71px] text-white">
             Futr is a social prediction platform where anyone can turn opinions
             into outcomes. Users predict real-world events , from sports to pop
             culture and get rewarded for being right. It’s like Twitter meets
@@ -102,9 +117,9 @@ export default function OurProducts() {
           <Link
             target="_blank"
             to={"https://futr-beta.mobii.ph/"}
-            className="group flex items-center gap-5 rounded-lg border border-[#875FFE] px-3 py-1 transition-all hover:border-white hover:bg-white"
+            className="group flex items-center gap-5 rounded-lg border border-[#875FFE] px-4 py-2 transition-all hover:border-white hover:bg-white"
           >
-            <p className="text-[12.5px] font-bold text-white transition-all group-hover:text-black">
+            <p className="text-[17.35px] font-bold text-white transition-all group-hover:text-black">
               Visit Futr.
             </p>
             <svg
@@ -133,9 +148,9 @@ export default function OurProducts() {
           <Link
             target="_blank"
             to={"https://futr-beta.mobii.ph/"}
-            className="group flex items-center gap-5 rounded-lg border border-white px-3 py-1 transition-all hover:bg-white"
+            className="group flex items-center gap-5 rounded-lg border border-white px-4 py-2 transition-all hover:bg-white"
           >
-            <p className="text-[12.5px] font-bold text-white transition-all group-hover:text-black">
+            <p className="text-[17.35px] font-bold text-white transition-all group-hover:text-black">
               Launch App
             </p>
             <svg
@@ -163,7 +178,7 @@ export default function OurProducts() {
             </svg>
           </Link>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 }

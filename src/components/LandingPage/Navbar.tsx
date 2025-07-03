@@ -1,6 +1,4 @@
 import { useState } from "react";
-import CustomModal from "../Modal/CustomModal";
-import { X } from "lucide-react";
 import LightTheBeacon from "./LightTheBeacon";
 export default function Navbar() {
   const [showForm, setShowForm] = useState<boolean>(false);
@@ -22,11 +20,11 @@ export default function Navbar() {
               Our Products
             </a>
           </li>
-          <li className="cursor-pointer hover:text-[#FFA100]">About us</li>
+          <li className="cursor-pointer hover:text-[#FFA100]">About Us</li>
           <li>
             <button
               onClick={() => setShowForm(true)}
-              className="cursor-pointer hover:text-[#FFA100]"
+              className="cursor-pointer text-[#FFA100]"
             >
               Light the Beacons
             </button>
