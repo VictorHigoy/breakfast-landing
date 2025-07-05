@@ -9,7 +9,7 @@ export default function OurProducts() {
     >
       <h1 className="relative text-[45.05px] font-black text-white md:text-[97.38px]">
         Our Product(s)
-        <p className="absolute -top-2 text-[10px] text-[#FFD966] sm:top-0 sm:right-0 md:text-[19.23px]">
+        <p className="absolute -top-2 right-0 text-[10px] text-[#FFD966] sm:top-0 md:text-[19.23px]">
           We're still cooking. More coming soon ;)
         </p>
       </h1>

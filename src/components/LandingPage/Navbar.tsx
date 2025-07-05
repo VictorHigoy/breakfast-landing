@@ -6,7 +6,7 @@ export default function Navbar() {
   return (
     <div className="absolute inset-x-0 flex items-center justify-between lg:px-5">
       <img
-        className="aspect-[10/10] h-[70px] w-[70px] object-contain md:h-[130px] md:w-[130px]"
+        className="aspect-[10/10] h-[90px] w-[90px] object-contain md:h-[130px] md:w-[130px]"
         src="/Logo/SecondBreakfast.png"
         alt="Logo"
       />

@@ -64,30 +64,30 @@ export default function LightTheBeacon({
             />
           </div>
         </div>
-        <div className="relative z-20 mt-5 flex w-full flex-col justify-center md:flex-row md:items-end md:justify-between">
+        <div className="relative z-20 mt-5 flex w-full flex-col items-center justify-center md:mt-0 md:flex-row md:items-center md:justify-between">
           <button className="mb-10 w-full cursor-pointer rounded-lg border border-white py-2 text-center text-[13px] font-bold text-white transition-all hover:border-[#875FFE] hover:bg-[#875FFE] md:mb-0 md:max-w-[307px]">
             Confirm
           </button>
-          <div className="z-10 flex flex-col items-center justify-center gap-3 md:flex-row">
-            <h2 className="text-[19.48px] font-medium text-white md:text-[23px]">
+          <div className="z-10 flex flex-col items-center justify-center gap-5 md:flex-row">
+            <h2 className="mr-8 text-[19.48px] font-medium text-white md:text-[23px]">
               Follow Us
             </h2>
-            <div className="flex gap-4">
+            <div className="flex items-center gap-4">
               <img
                 src="/LandingPage/LightTheBeacon/Twitter.png"
                 alt="ring"
-                className="h-[18.25px] w-[20.72px] md:h-[31px] md:w-[35px]"
+                className="h-[43px] w-[49px] md:h-[47px] md:w-[53px]"
               />
               <img
                 src="/LandingPage/LightTheBeacon/Discord.png"
                 alt="ring"
-                className="block h-[18.58px] w-[24.07px] md:hidden"
+                className="block h-[82px] w-[69px] md:hidden md:h-[86px] md:w-[73px]"
               />
             </div>
             <img
               src="/LandingPage/LightTheBeacon/Discord.png"
               alt="ring"
-              className="hidden h-[31px] w-[40px] md:block"
+              className="hidden h-[86px] w-[73px] md:block"
             />
           </div>
         </div>
