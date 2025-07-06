@@ -17,7 +17,7 @@ const data1 = [
   {
     name: "Jay Elamar",
     title: "Forgemaster of Code",
-    linkedIn: "",
+    linkedIn: "https://www.linkedin.com/in/jay-termulo",
     background: "/LandingPage/Fellowship/Images/Jay/background.png",
     imageBg: "/LandingPage/Fellowship/Images/Jay/imageBackground.png",
     image: "/LandingPage/Fellowship/Images/Jay/image.png",
@@ -30,7 +30,7 @@ const data1 = [
   {
     name: "Victor Higoy",
     title: "Elf of Elegance",
-    linkedIn: "",
+    linkedIn: "https://www.linkedin.com/in/victor-higoy-jr-6a770320b/",
     background: "/LandingPage/Fellowship/Images/Victor/background.png",
     imageBg: "/LandingPage/Fellowship/Images/Victor/imageBackground.png",
     image: "/LandingPage/Fellowship/Images/Victor/image.png",
@@ -46,7 +46,8 @@ const data2 = [
   {
     name: "Vince De Vera",
     title: "Overseer of the Fellowship",
-    linkedIn: "/",
+    linkedIn:
+      "https://www.linkedin.com/in/vincedevera?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
     background: "/LandingPage/Fellowship/Images/Vince/background.png",
     imageBg: "/LandingPage/Fellowship/Images/Vince/imageBackground.png",
     image: "/LandingPage/Fellowship/Images/Vince/image.png",
@@ -88,7 +89,7 @@ const data3 = [
   {
     name: "Kenneth Miclat",
     title: "UXling of the White Board",
-    linkedIn: "",
+    linkedIn: "https://www.linkedin.com/in/kenneth-james-miclat-12a558239/",
     background: "/LandingPage/Fellowship/Images/Kenneth/background.png",
     imageBg: "/LandingPage/Fellowship/Images/Kenneth/imageBackground.png",
     image: "/LandingPage/Fellowship/Images/Kenneth/image.png",
@@ -123,12 +124,12 @@ export default function Fellowship() {
           alt="Ring"
         />
       </div>
-      <div className="mx-auto max-w-[1106px] pt-10 pb-24">
-        <h1 className="text-center text-[97.38px] font-black text-white">
+      <div className="mx-auto max-w-[1106px] pt-10 pb-10 md:pb-24">
+        <h1 className="text-center text-[45.05px] font-black text-white md:text-[97.38px]">
           The Fellowship
         </h1>
-        <div className="flex max-w-[1106px] justify-between">
-          <div className="flex h-full w-full flex-col items-start gap-2">
+        <div className="my-20 flex max-w-[1106px] justify-between">
+          <div className="hidden h-full w-full flex-col items-start gap-2 md:flex">
             {data1.map((item, index) => {
               return (
                 <div
@@ -169,6 +170,7 @@ export default function Fellowship() {
                         {item.title}
                       </p>
                       <Link
+                        target="_blank"
                         to={item.linkedIn}
                         className="origin-left transition-all hover:scale-105"
                       >
@@ -183,7 +185,7 @@ export default function Fellowship() {
               );
             })}
           </div>
-          <div className="flex h-full w-full flex-col items-center gap-2">
+          <div className="flex h-full w-full flex-col items-center gap-5 px-5 md:gap-2 md:px-0">
             {data2.map((item, index) => {
               return (
                 <div
@@ -225,6 +227,7 @@ export default function Fellowship() {
                       </p>
                       <Link
                         to={item.linkedIn}
+                        target="_blank"
                         className="origin-left transition-all hover:scale-105"
                       >
                         <img
@@ -237,8 +240,120 @@ export default function Fellowship() {
                 </div>
               );
             })}
+            <div className="flex h-full w-full flex-row items-start gap-2 overflow-auto pt-5 pr-5 md:hidden">
+              {data1.map((item, index) => {
+                return (
+                  <div
+                    key={index}
+                    style={{ backgroundImage: `url(${item.background})` }}
+                    className={`relative flex h-full min-h-[382px] w-full min-w-[287px] flex-col items-center bg-cover bg-center`}
+                  >
+                    <div className="max-w-[203px]">
+                      <div
+                        style={{ backgroundImage: `url(${item.imageBg})` }}
+                        className={`relative mt-7 h-full min-h-[239px] w-full min-w-[203px] bg-cover bg-center`}
+                      >
+                        <div
+                          className={`absolute ${item.positionTop} ${item.positionLeft} -translate-x-1/2`}
+                        >
+                          <img
+                            src={item.image}
+                            alt=""
+                            style={{
+                              minHeight: `${item.imageHeight}px`,
+                              minWidth: `${item.imageWidth}px`,
+                            }}
+                            className="object-cover"
+                          />
+                        </div>
+                      </div>
+                      <div className="flex flex-col gap-1 pt-1 pb-3">
+                        <h1
+                          style={{ color: item.textColor }}
+                          className={`text-[19px] leading-none font-black text-nowrap`}
+                        >
+                          {item.name}
+                        </h1>
+                        <p
+                          style={{ color: item.textColor }}
+                          className={`text-[16.4px] font-extralight`}
+                        >
+                          {item.title}
+                        </p>
+                        <Link
+                          target="_blank"
+                          to={item.linkedIn}
+                          className="origin-left transition-all hover:scale-105"
+                        >
+                          <img
+                            src="/LandingPage/Fellowship/LinkedInLink.png"
+                            alt="LinkedIn"
+                          />
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+            <div className="flex h-full w-full flex-row items-start gap-2 overflow-auto pt-5 pr-5 md:hidden">
+              {data3.map((item, index) => {
+                return (
+                  <div
+                    key={index}
+                    style={{ backgroundImage: `url(${item.background})` }}
+                    className={`relative flex h-full min-h-[382px] w-full min-w-[287px] flex-col items-center bg-cover bg-center`}
+                  >
+                    <div className="max-w-[203px]">
+                      <div
+                        style={{ backgroundImage: `url(${item.imageBg})` }}
+                        className={`relative mt-7 h-full min-h-[239px] w-full min-w-[203px] bg-cover bg-center`}
+                      >
+                        <div
+                          className={`absolute ${item.positionTop} ${item.positionLeft} -translate-x-1/2`}
+                        >
+                          <img
+                            src={item.image}
+                            alt=""
+                            style={{
+                              minHeight: `${item.imageHeight}px`,
+                              minWidth: `${item.imageWidth}px`,
+                            }}
+                            className="object-cover"
+                          />
+                        </div>
+                      </div>
+                      <div className="flex flex-col gap-1 pt-1 pb-3">
+                        <h1
+                          style={{ color: item.textColor }}
+                          className={`text-[19px] leading-none font-black text-nowrap`}
+                        >
+                          {item.name}
+                        </h1>
+                        <p
+                          style={{ color: item.textColor }}
+                          className={`text-[16.4px] font-extralight`}
+                        >
+                          {item.title}
+                        </p>
+                        <Link
+                          target="_blank"
+                          to={item.linkedIn}
+                          className="origin-left transition-all hover:scale-105"
+                        >
+                          <img
+                            src="/LandingPage/Fellowship/LinkedInLink.png"
+                            alt="LinkedIn"
+                          />
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
-          <div className="flex h-full w-full flex-col items-end gap-2">
+          <div className="hidden h-full w-full flex-col items-end gap-2 md:flex">
             {data3.map((item, index) => {
               return (
                 <div
@@ -279,6 +394,7 @@ export default function Fellowship() {
                         {item.title}
                       </p>
                       <Link
+                        target="_blank"
                         to={item.linkedIn}
                         className="origin-left transition-all hover:scale-105"
                       >
