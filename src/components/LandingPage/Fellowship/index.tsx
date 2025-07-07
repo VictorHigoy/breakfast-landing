@@ -4,7 +4,7 @@ const data1 = [
   {
     name: "Gillianne Dela Cruz",
     title: "Silmarillustrator",
-    linkedIn: "/",
+    linkedIn: "https://www.linkedin.com/in/gillianne-dela-cruz-485288290/",
     background: "/LandingPage/Fellowship/Images/Gillianne/background.png",
     imageBg: "/LandingPage/Fellowship/Images/Gillianne/imageBackground.png",
     image: "/LandingPage/Fellowship/Images/Gillianne/image.png",
@@ -60,7 +60,7 @@ const data2 = [
   {
     name: "Aerold Balboa",
     title: "Invoker of the Tech Flame",
-    linkedIn: "",
+    linkedIn: "https://www.linkedin.com/in/aerold-balboa/",
     background: "/LandingPage/Fellowship/Images/Aerold/background.png",
     imageBg: "/LandingPage/Fellowship/Images/Aerold/imageBackground.png",
     image: "/LandingPage/Fellowship/Images/Aerold/image.png",
@@ -76,7 +76,7 @@ const data3 = [
   {
     name: "John Ogama",
     title: "Builder of Realms",
-    linkedIn: "/",
+    linkedIn: "https://www.linkedin.com/in/johnogama/",
     background: "/LandingPage/Fellowship/Images/John/background.png",
     imageBg: "/LandingPage/Fellowship/Images/John/imageBackground.png",
     image: "/LandingPage/Fellowship/Images/John/image.png",
@@ -102,7 +102,7 @@ const data3 = [
   {
     name: "Chelsy Tang",
     title: "Apprentice of User Realms",
-    linkedIn: "",
+    linkedIn: "https://www.linkedin.com/in/chelseatang11",
     background: "/LandingPage/Fellowship/Images/Chelsy/background.png",
     imageBg: "/LandingPage/Fellowship/Images/Chelsy/imageBackground.png",
     image: "/LandingPage/Fellowship/Images/Chelsy/image.png",
@@ -115,6 +115,8 @@ const data3 = [
 ];
 
 export default function Fellowship() {
+  const combinedData = [...data1, ...data3];
+
   return (
     <div className="relative h-auto w-full overflow-hidden bg-[url('/LandingPage/Fellowship/fellowshipBg.png')] bg-cover bg-center">
       <div className="absolute -top-40 left-1/2 -translate-x-1/2">
@@ -135,7 +137,7 @@ export default function Fellowship() {
                 <div
                   key={index}
                   style={{ backgroundImage: `url(${item.background})` }}
-                  className={`relative flex h-full min-h-[382px] w-full max-w-[287px] flex-col items-center bg-cover bg-center`}
+                  className={`relative flex h-full min-h-[382px] w-full max-w-[287px] flex-col items-center bg-cover bg-center transition-all hover:scale-105`}
                 >
                   <div className="max-w-[203px]">
                     <div
@@ -191,7 +193,7 @@ export default function Fellowship() {
                 <div
                   key={index}
                   style={{ backgroundImage: `url(${item.background})` }}
-                  className={`relative flex h-full min-h-[464px] w-full max-w-[341.87px] flex-col items-center bg-cover bg-center`}
+                  className={`relative flex h-full min-h-[464px] w-full max-w-[341.87px] flex-col items-center bg-cover bg-center transition-all hover:scale-105`}
                 >
                   <div className="max-w-[268.71px]">
                     <div
@@ -241,68 +243,12 @@ export default function Fellowship() {
               );
             })}
             <div className="flex h-full w-full flex-row items-start gap-2 overflow-auto pt-5 pr-5 md:hidden">
-              {data1.map((item, index) => {
+              {combinedData.map((item, index) => {
                 return (
                   <div
                     key={index}
                     style={{ backgroundImage: `url(${item.background})` }}
-                    className={`relative flex h-full min-h-[382px] w-full min-w-[287px] flex-col items-center bg-cover bg-center`}
-                  >
-                    <div className="max-w-[203px]">
-                      <div
-                        style={{ backgroundImage: `url(${item.imageBg})` }}
-                        className={`relative mt-7 h-full min-h-[239px] w-full min-w-[203px] bg-cover bg-center`}
-                      >
-                        <div
-                          className={`absolute ${item.positionTop} ${item.positionLeft} -translate-x-1/2`}
-                        >
-                          <img
-                            src={item.image}
-                            alt=""
-                            style={{
-                              minHeight: `${item.imageHeight}px`,
-                              minWidth: `${item.imageWidth}px`,
-                            }}
-                            className="object-cover"
-                          />
-                        </div>
-                      </div>
-                      <div className="flex flex-col gap-1 pt-1 pb-3">
-                        <h1
-                          style={{ color: item.textColor }}
-                          className={`text-[19px] leading-none font-black text-nowrap`}
-                        >
-                          {item.name}
-                        </h1>
-                        <p
-                          style={{ color: item.textColor }}
-                          className={`text-[16.4px] font-extralight`}
-                        >
-                          {item.title}
-                        </p>
-                        <Link
-                          target="_blank"
-                          to={item.linkedIn}
-                          className="origin-left transition-all hover:scale-105"
-                        >
-                          <img
-                            src="/LandingPage/Fellowship/LinkedInLink.png"
-                            alt="LinkedIn"
-                          />
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-            <div className="flex h-full w-full flex-row items-start gap-2 overflow-auto pt-5 pr-5 md:hidden">
-              {data3.map((item, index) => {
-                return (
-                  <div
-                    key={index}
-                    style={{ backgroundImage: `url(${item.background})` }}
-                    className={`relative flex h-full min-h-[382px] w-full min-w-[287px] flex-col items-center bg-cover bg-center`}
+                    className={`relative flex h-full min-h-[382px] w-full min-w-[287px] flex-col items-center bg-cover bg-center transition-all hover:scale-105`}
                   >
                     <div className="max-w-[203px]">
                       <div
@@ -359,7 +305,7 @@ export default function Fellowship() {
                 <div
                   key={index}
                   style={{ backgroundImage: `url(${item.background})` }}
-                  className={`relative flex h-full min-h-[382px] w-full max-w-[287px] flex-col items-center bg-cover bg-center`}
+                  className={`relative flex h-full min-h-[382px] w-full max-w-[287px] flex-col items-center bg-cover bg-center transition-all hover:scale-105`}
                 >
                   <div className="max-w-[203px]">
                     <div

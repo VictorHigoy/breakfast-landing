@@ -23,12 +23,23 @@ body {
   font-weight: normal;
 }
 
+@font-face {
+  font-family: "Medieval Sharp";
+  src: url("/fonts/MedievalSharp-Book.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
 .header-text {
   font-family: "TF Madloud DEMO", sans-serif;
 }
 
 .date-font {
   font-family: "Fragment Mono", sans-serif;
+}
+
+.footer-text {
+  font-family: "Medieval Sharp", sans-serif;
 }
 
 @theme {
@@ -53,6 +64,44 @@ body {
   white-space: nowrap;
 }
 
-.group:hover .marquee {
-  animation-play-state: paused;
+@keyframes rotate-bg {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.bg-rotate::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/LandingPage/Footer/footerText.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  animation: rotate-bg 30s linear infinite;
+  z-index: 0;
+}
+
+.bg-rotate > * {
+  position: relative;
+  z-index: 10;
+}
+
+@keyframes tilt {
+  0% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(-5deg);
+  }
+}
+
+.tilt-slow {
+  animation: tilt 1s ease-in-out infinite;
 }
