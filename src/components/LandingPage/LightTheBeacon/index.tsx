@@ -33,7 +33,7 @@ export default function LightTheBeacon({
         (error) => {
           setIsSuccess(true);
           setError(true);
-          console.log("error");
+          console.log(error);
         },
       );
   };
