@@ -1,13 +1,16 @@
 import { motion } from "framer-motion";
 
-export default function Content() {
+export default function Content({
+  setIsGlitchOpen,
+}: {
+  setIsGlitchOpen: React.Dispatch<React.SetStateAction<boolean>>;
+}) {
   return (
     <div className="relative flex h-full w-full items-center justify-center lg:h-full">
       <h1 className="header-text z-20 text-center text-5xl text-[#1F1F1F] lg:text-[96.8px]">
         Bold ideas
         <br className="md:hidden" /> served Twice.
       </h1>
-
       {/* Pipe */}
       <motion.img
         className="absolute top-[150px] left-20 aspect-[10/10] h-[70px] w-[70px] md:top-[140px] md:left-40 md:h-[100px] md:w-[100px] lg:top-[200px] lg:left-[200px] lg:h-[140px] lg:w-[140px] 2xl:top-[180px] 2xl:left-[490px] 2xl:h-[170px] 2xl:w-[170px]"
@@ -84,7 +87,8 @@ export default function Content() {
       />
 
       <motion.img
-        className="absolute top-[150px] right-16 aspect-[10/10] h-[70px] w-[70px] md:top-[100px] md:right-36 md:h-[120px] md:w-[120px] lg:top-[150px] lg:right-[350px] lg:h-[150px] lg:w-[150px] 2xl:right-[500px] 2xl:h-[170px] 2xl:w-[170px]"
+        onClick={() => setIsGlitchOpen(true)}
+        className="absolute top-[150px] right-16 aspect-[10/10] h-[70px] w-[70px] cursor-pointer md:top-[100px] md:right-36 md:h-[120px] md:w-[120px] lg:top-[150px] lg:right-[350px] lg:h-[150px] lg:w-[150px] 2xl:right-[500px] 2xl:h-[170px] 2xl:w-[170px]"
         src="/LandingPage/Hero/Vector/Ring.png"
         alt="Ring"
       />

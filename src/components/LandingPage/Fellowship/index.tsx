@@ -154,7 +154,7 @@ export default function Fellowship() {
                             minHeight: `${item.imageHeight}px`,
                             minWidth: `${item.imageWidth}px`,
                           }}
-                          className="object-cover"
+                          className="object-contain"
                         />
                       </div>
                     </div>
@@ -210,7 +210,7 @@ export default function Fellowship() {
                             minHeight: `${item.imageHeight}px`,
                             minWidth: `${item.imageWidth}px`,
                           }}
-                          className="object-cover"
+                          className="object-contain"
                         />
                       </div>
                     </div>
@@ -265,7 +265,7 @@ export default function Fellowship() {
                               minHeight: `${item.imageHeight}px`,
                               minWidth: `${item.imageWidth}px`,
                             }}
-                            className="object-cover"
+                            className="object-contain"
                           />
                         </div>
                       </div>
@@ -322,7 +322,7 @@ export default function Fellowship() {
                             minHeight: `${item.imageHeight}px`,
                             minWidth: `${item.imageWidth}px`,
                           }}
-                          className="z-10 object-cover"
+                          className="z-10 object-contain"
                         />
                       </div>
                     </div>
