@@ -8,14 +8,13 @@ import { useEffect, useState } from "react";
 
 function App() {
   const [isGlitchOpen, setIsGlitchOpen] = useState(false);
-  console.log(isGlitchOpen);
+
   useEffect(() => {
     if (isGlitchOpen) {
       const timer = setTimeout(() => {
         setIsGlitchOpen(false);
       }, 2000);
 
-      // Cleanup in case component unmounts before 3s
       return () => clearTimeout(timer);
     }
   }, [isGlitchOpen]);
