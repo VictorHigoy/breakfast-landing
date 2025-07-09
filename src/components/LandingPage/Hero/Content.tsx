@@ -88,7 +88,7 @@ export default function Content({
 
       <motion.img
         onClick={() => setIsGlitchOpen(true)}
-        className="absolute top-[150px] right-16 aspect-[10/10] h-[70px] w-[70px] cursor-pointer md:top-[100px] md:right-36 md:h-[120px] md:w-[120px] lg:top-[150px] lg:right-[350px] lg:h-[150px] lg:w-[150px] 2xl:right-[500px] 2xl:h-[170px] 2xl:w-[170px]"
+        className="absolute top-[150px] right-16 aspect-[10/10] h-[70px] w-[70px] cursor-pointer transition-all hover:scale-105 md:top-[100px] md:right-36 md:h-[120px] md:w-[120px] lg:top-[150px] lg:right-[350px] lg:h-[150px] lg:w-[150px] 2xl:right-[500px] 2xl:h-[170px] 2xl:w-[170px]"
         src="/LandingPage/Hero/Vector/Ring.png"
         alt="Ring"
       />
