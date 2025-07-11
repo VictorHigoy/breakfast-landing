@@ -8,7 +8,7 @@ export default function OurProducts() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowSvg(true);
-    }, 300); // Delay in milliseconds
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);

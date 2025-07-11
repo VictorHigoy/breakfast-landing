@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function Footer() {
   return (
     <div className="mx-auto mt-5 mb-18 flex w-full justify-center min-[742px]:mt-16 min-[742px]:mb-20">
-      <div className="bg-rotate relative flex w-[400px] items-center justify-center min-[742px]:min-h-[670px] min-[742px]:w-[670px]">
+      <div className="bg-rotate relative flex w-[400px] items-center justify-center min-[742px]:min-h-[800px] min-[742px]:w-[800px]">
         <div className="-mt-2 flex flex-col items-center justify-center gap-5 p-20 min-[742px]:p-0">
           <img
             src="/LandingPage/Footer/LogoWhite.png"
